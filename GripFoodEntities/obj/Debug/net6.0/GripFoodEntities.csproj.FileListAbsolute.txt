@@ -1,0 +1,14 @@
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\bin\Debug\net6.0\GripFoodEntities.deps.json
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\bin\Debug\net6.0\GripFoodEntities.runtimeconfig.json
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\bin\Debug\net6.0\GripFoodEntities.dll
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\bin\Debug\net6.0\GripFoodEntities.pdb
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.csproj.AssemblyReference.cache
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.AssemblyInfoInputs.cache
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.AssemblyInfo.cs
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.csproj.CoreCompileInputs.cache
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.dll
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\refint\GripFoodEntities.dll
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.pdb
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\GripFoodEntities.genruntimeconfig.cache
+C:\Users\Jason\source\repos\GripFoodBackend\GripFoodEntities\obj\Debug\net6.0\ref\GripFoodEntities.dll
