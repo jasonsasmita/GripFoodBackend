@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GripFoodEntities
 {
-    public class GripFoodDbContext : DbContext
+    public class GripFoodDbContext : DbContext, IDataProtectionKeyContext
     {
         public GripFoodDbContext(DbContextOptions<GripFoodDbContext> options) : base(options) { }
 
@@ -131,5 +132,6 @@ namespace GripFoodEntities
         public DbSet<CartDetail> CartDetails => Set<CartDetail>();
         public DbSet<FoodItem> FoodItems => Set<FoodItem>();
 
+        public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
     }
 }
