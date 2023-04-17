@@ -10,6 +10,20 @@ namespace GripFoodEntities.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "DataProtectionKeys",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FriendlyName = table.Column<string>(type: "TEXT", nullable: true),
+                    Xml = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataProtectionKeys", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OpenIddictApplications",
                 columns: table => new
                 {
@@ -208,62 +222,62 @@ namespace GripFoodEntities.Migrations
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "Id", "Name" },
-                values: new object[] { "01GY7A415ENYWHHYGNKWT50877", "Kafe Hijau" });
+                values: new object[] { "01GY7GN90PH206M7X44HX1ZHRK", "Geprek Sambal Bakar" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "Id", "Name" },
-                values: new object[] { "01GY7A415EPGD19QYAGXT2F6E4", "Warung Pak Eko" });
+                values: new object[] { "01GY7GN90PJE9KXWX0HN2K8KZC", "Warung Pak Eko" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "Id", "Name" },
-                values: new object[] { "01GY7A415EQR3N4MXE67BJANDF", "Geprek Sambal Bakar" });
+                values: new object[] { "01GY7GN90PQZZTYNZA8SAT61Z8", "Kafe Hijau" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "Name", "Password" },
-                values: new object[] { "01GY7A415E4NM1GNFS2MXEFYH3", "user02@gmail.com", "user02", "password231" });
+                values: new object[] { "01GY7GN90PHJAEA7HENP5XSYPH", "user02@gmail.com", "user02", "password231" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "Name", "Password" },
-                values: new object[] { "01GY7A415ECC17N0KFQGX8Q8ZE", "user01@gmail.com", "user01", "password123" });
+                values: new object[] { "01GY7GN90PTDY5JN374XVAXQBD", "user03@gmail.com", "user03", "password312" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "Name", "Password" },
-                values: new object[] { "01GY7A415EYHR72H9EB34R9BXD", "user03@gmail.com", "user03", "password312" });
+                values: new object[] { "01GY7GN90PXXG68RXTDZDV4KST", "user01@gmail.com", "user01", "password123" });
 
             migrationBuilder.InsertData(
                 table: "FoodItems",
                 columns: new[] { "Id", "Name", "Price", "RestaurantId" },
-                values: new object[] { "01GY7A415E25P26GYJD1FN03MF", "Cappucino Cincau", 11000, "01GY7A415ENYWHHYGNKWT50877" });
+                values: new object[] { "01GY7GN90P2AJC8NA1TCBJ98T3", "Cappucino Cincau", 11000, "01GY7GN90PQZZTYNZA8SAT61Z8" });
 
             migrationBuilder.InsertData(
                 table: "FoodItems",
                 columns: new[] { "Id", "Name", "Price", "RestaurantId" },
-                values: new object[] { "01GY7A415E64BBCWJ3VQXXGWF5", "Geprek Ayam", 12000, "01GY7A415EQR3N4MXE67BJANDF" });
+                values: new object[] { "01GY7GN90P3X13KD0169QB4D5E", "Mocha Latte", 21000, "01GY7GN90PQZZTYNZA8SAT61Z8" });
 
             migrationBuilder.InsertData(
                 table: "FoodItems",
                 columns: new[] { "Id", "Name", "Price", "RestaurantId" },
-                values: new object[] { "01GY7A415E98NGTZC0KAPRR60S", "Mocha Latte", 21000, "01GY7A415ENYWHHYGNKWT50877" });
+                values: new object[] { "01GY7GN90P7FKCCY4GMW75FNHC", "Telur Balado", 6000, "01GY7GN90PJE9KXWX0HN2K8KZC" });
 
             migrationBuilder.InsertData(
                 table: "FoodItems",
                 columns: new[] { "Id", "Name", "Price", "RestaurantId" },
-                values: new object[] { "01GY7A415EBS9J1CXKXC7S5R74", "Telur Balado", 6000, "01GY7A415EPGD19QYAGXT2F6E4" });
+                values: new object[] { "01GY7GN90P8FGP7MQ6NC21MAPN", "Mie Geprek", 15000, "01GY7GN90PH206M7X44HX1ZHRK" });
 
             migrationBuilder.InsertData(
                 table: "FoodItems",
                 columns: new[] { "Id", "Name", "Price", "RestaurantId" },
-                values: new object[] { "01GY7A415EHXXN3DY2QQJR24JJ", "Empal Goreng", 10000, "01GY7A415EPGD19QYAGXT2F6E4" });
+                values: new object[] { "01GY7GN90PCMFF7T4TZCZPDM16", "Empal Goreng", 10000, "01GY7GN90PJE9KXWX0HN2K8KZC" });
 
             migrationBuilder.InsertData(
                 table: "FoodItems",
                 columns: new[] { "Id", "Name", "Price", "RestaurantId" },
-                values: new object[] { "01GY7A415EM9AA0CG4S9W8PH44", "Mie Geprek", 15000, "01GY7A415EQR3N4MXE67BJANDF" });
+                values: new object[] { "01GY7GN90PSF6XYNGVRTQH17D8", "Geprek Ayam", 12000, "01GY7GN90PH206M7X44HX1ZHRK" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CartDetails_CartId",
@@ -328,6 +342,9 @@ namespace GripFoodEntities.Migrations
         {
             migrationBuilder.DropTable(
                 name: "CartDetails");
+
+            migrationBuilder.DropTable(
+                name: "DataProtectionKeys");
 
             migrationBuilder.DropTable(
                 name: "OpenIddictScopes");

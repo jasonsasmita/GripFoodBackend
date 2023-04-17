@@ -1,34 +1,55 @@
 ﻿using GripFoodEntities;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using OpenIddict.Abstractions;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 namespace GripFoodBackend.Services
 {
-    public partial class AutomaticMigrationService
+    public class AutomaticMigrationService
     {
         private readonly GripFoodDbContext _db;
         private readonly IOpenIddictApplicationManager _appManager;
         private readonly IOpenIddictScopeManager _scopeManager;
 
         public AutomaticMigrationService(
-            GripFoodDbContext gripfoodDbContext,
+            GripFoodDbContext applicationDbContext,
             IOpenIddictApplicationManager openIddictApplicationManager,
             IOpenIddictScopeManager openIddictScopeManager
         )
         {
-            _db = gripfoodDbContext;
+            _db = applicationDbContext;
             _appManager = openIddictApplicationManager;
             _scopeManager = openIddictScopeManager;
         }
 
         public async Task MigrateAsync(CancellationToken cancellationToken)
         {
+            await _db.Database.MigrateAsync(cancellationToken);
             await CreateApiServerApp(cancellationToken);
             await CreateApiScope(cancellationToken);
             await CreateCmsApp(cancellationToken);
+            await AddAdministrator(cancellationToken);
         }
 
+        private async Task AddAdministrator(CancellationToken cancellationToken)
+        {
+            var id = "01GY7FMXN2RENEAS7TGS72RZ0T";
+            var exist = await _db.Users.Where(Q => Q.Id == id).AnyAsync(cancellationToken);
+            if (exist)
+            {
+                return;
+            }
+
+            var user = new User
+            {
+                Id = id,
+                Name = "New User",
+                Email = "user@gmail.com",
+                Password = BCrypt.Net.BCrypt.HashPassword("password"),
+            };
+            _db.Users.Add(user);
+            await _db.SaveChangesAsync(cancellationToken);
+        }
 
         private async Task CreateApiServerApp(CancellationToken cancellationToken)
         {
@@ -52,7 +73,6 @@ namespace GripFoodBackend.Services
                     Permissions.GrantTypes.ClientCredentials
                 }
             }, cancellationToken);
-
         }
 
         private async Task CreateApiScope(CancellationToken cancellationToken)
@@ -110,6 +130,5 @@ namespace GripFoodBackend.Services
 
             return await _appManager.GetIdAsync(o, cancellationToken);
         }
-
     }
 }

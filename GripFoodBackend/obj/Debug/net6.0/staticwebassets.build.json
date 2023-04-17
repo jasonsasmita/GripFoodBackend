@@ -1,11 +1,105 @@
 {
   "Version": 1,
-  "Hash": "VVDu+hHGn4AGyKzdsDVl90fOWiNgYLYRHg/N1Anf58k=",
+  "Hash": "Eu0IOCTBVPFv8gUxfh4IiE3llIgxf/OiWSoY/sBfxJY=",
   "Source": "GripFoodBackend",
   "BasePath": "_content/GripFoodBackend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "GripFoodBackend\\wwwroot",
+      "Source": "GripFoodBackend",
+      "ContentRoot": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\",
+      "BasePath": "_content/GripFoodBackend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+      "SourceId": "GripFoodBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\",
+      "BasePath": "_content/GripFoodBackend",
+      "RelativePath": "lib/bootstrap/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "SourceId": "GripFoodBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\",
+      "BasePath": "_content/GripFoodBackend",
+      "RelativePath": "lib/bootstrap/js/bootstrap.bundle.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "SourceId": "GripFoodBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\",
+      "BasePath": "_content/GripFoodBackend",
+      "RelativePath": "lib/jquery/jquery.slim.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\lib\\jquery-validate\\jquery.validate.min.js",
+      "SourceId": "GripFoodBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\",
+      "BasePath": "_content/GripFoodBackend",
+      "RelativePath": "lib/jquery-validate/jquery.validate.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validate\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "GripFoodBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\wwwroot\\",
+      "BasePath": "_content/GripFoodBackend",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    }
+  ]
 }

@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddRazorPages();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -22,6 +23,13 @@ builder.Services.AddDbContextPool<GripFoodDbContext>(Q =>
     Q.UseSqlite("Data Source=local.db");
     Q.UseOpenIddict();
 });
+
+builder.Services.AddAuthentication()
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/auth/sign-in";
+        options.LogoutPath = "/connect/logout";
+    });
 
 builder.Services.AddDataProtection().PersistKeysToDbContext<GripFoodDbContext>();
 
@@ -123,8 +131,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapRazorPages();
 app.Run();

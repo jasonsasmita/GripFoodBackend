@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GripFoodEntities.Migrations
 {
     [DbContext(typeof(GripFoodDbContext))]
-    [Migration("20230417095316_OpenIddict")]
+    [Migration("20230417114732_OpenIddict")]
     partial class OpenIddict
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,45 +91,45 @@ namespace GripFoodEntities.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "01GY7A415EHXXN3DY2QQJR24JJ",
+                            Id = "01GY7GN90PCMFF7T4TZCZPDM16",
                             Name = "Empal Goreng",
                             Price = 10000,
-                            RestaurantId = "01GY7A415EPGD19QYAGXT2F6E4"
+                            RestaurantId = "01GY7GN90PJE9KXWX0HN2K8KZC"
                         },
                         new
                         {
-                            Id = "01GY7A415EBS9J1CXKXC7S5R74",
+                            Id = "01GY7GN90P7FKCCY4GMW75FNHC",
                             Name = "Telur Balado",
                             Price = 6000,
-                            RestaurantId = "01GY7A415EPGD19QYAGXT2F6E4"
+                            RestaurantId = "01GY7GN90PJE9KXWX0HN2K8KZC"
                         },
                         new
                         {
-                            Id = "01GY7A415E64BBCWJ3VQXXGWF5",
+                            Id = "01GY7GN90PSF6XYNGVRTQH17D8",
                             Name = "Geprek Ayam",
                             Price = 12000,
-                            RestaurantId = "01GY7A415EQR3N4MXE67BJANDF"
+                            RestaurantId = "01GY7GN90PH206M7X44HX1ZHRK"
                         },
                         new
                         {
-                            Id = "01GY7A415EM9AA0CG4S9W8PH44",
+                            Id = "01GY7GN90P8FGP7MQ6NC21MAPN",
                             Name = "Mie Geprek",
                             Price = 15000,
-                            RestaurantId = "01GY7A415EQR3N4MXE67BJANDF"
+                            RestaurantId = "01GY7GN90PH206M7X44HX1ZHRK"
                         },
                         new
                         {
-                            Id = "01GY7A415E25P26GYJD1FN03MF",
+                            Id = "01GY7GN90P2AJC8NA1TCBJ98T3",
                             Name = "Cappucino Cincau",
                             Price = 11000,
-                            RestaurantId = "01GY7A415ENYWHHYGNKWT50877"
+                            RestaurantId = "01GY7GN90PQZZTYNZA8SAT61Z8"
                         },
                         new
                         {
-                            Id = "01GY7A415E98NGTZC0KAPRR60S",
+                            Id = "01GY7GN90P3X13KD0169QB4D5E",
                             Name = "Mocha Latte",
                             Price = 21000,
-                            RestaurantId = "01GY7A415ENYWHHYGNKWT50877"
+                            RestaurantId = "01GY7GN90PQZZTYNZA8SAT61Z8"
                         });
                 });
 
@@ -149,17 +149,17 @@ namespace GripFoodEntities.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "01GY7A415EPGD19QYAGXT2F6E4",
+                            Id = "01GY7GN90PJE9KXWX0HN2K8KZC",
                             Name = "Warung Pak Eko"
                         },
                         new
                         {
-                            Id = "01GY7A415EQR3N4MXE67BJANDF",
+                            Id = "01GY7GN90PH206M7X44HX1ZHRK",
                             Name = "Geprek Sambal Bakar"
                         },
                         new
                         {
-                            Id = "01GY7A415ENYWHHYGNKWT50877",
+                            Id = "01GY7GN90PQZZTYNZA8SAT61Z8",
                             Name = "Kafe Hijau"
                         });
                 });
@@ -188,25 +188,42 @@ namespace GripFoodEntities.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "01GY7A415ECC17N0KFQGX8Q8ZE",
+                            Id = "01GY7GN90PXXG68RXTDZDV4KST",
                             Email = "user01@gmail.com",
                             Name = "user01",
                             Password = "password123"
                         },
                         new
                         {
-                            Id = "01GY7A415E4NM1GNFS2MXEFYH3",
+                            Id = "01GY7GN90PHJAEA7HENP5XSYPH",
                             Email = "user02@gmail.com",
                             Name = "user02",
                             Password = "password231"
                         },
                         new
                         {
-                            Id = "01GY7A415EYHR72H9EB34R9BXD",
+                            Id = "01GY7GN90PTDY5JN374XVAXQBD",
                             Email = "user03@gmail.com",
                             Name = "user03",
                             Password = "password312"
                         });
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.DataProtectionKey", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FriendlyName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Xml")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DataProtectionKeys");
                 });
 
             modelBuilder.Entity("OpenIddict.EntityFrameworkCore.Models.OpenIddictEntityFrameworkCoreApplication", b =>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LHgAe63f+elL0FAqKo8EEHaGEs8zDMaR2zCd3c9RU2pqeDtPx5tiYz+AHbBnZWcOUupiqjEFLCcXY0ppbNwCnQ==",
+  "dgSpecHash": "kR9aaP43KDNX9PsxTH4FsVtLWrM5mLca1XzXhVsJ1oAVwCITWRmiKQfzH1qcfS/vTHI6sxX3rxGwm1MfjdWz2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jason\\source\\repos\\GripFoodBackend\\GripFoodBackend\\GripFoodBackend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jason\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
